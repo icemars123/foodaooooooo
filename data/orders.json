@@ -1,0 +1,154 @@
+[
+  {
+    "_id": {
+      "$oid": "5e62a1b34d0e9251f6ff3b61"
+    },
+    "products": [
+      {
+        "product": {
+          "_id": {
+            "$oid": "5e606cf5f8a0ec2cac5b85ce"
+          },
+          "category": "Sweet Spicy Chicken with Cheese",
+          "price": "5.5/each"
+        },
+        "quantity": {
+          "$numberInt": "1"
+        }
+      }
+    ],
+    "date": null,
+    "total": {
+      "$numberInt": "10"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e62a2304d0e9251f6ff3b82"
+    },
+    "products": [
+      {
+        "product": {
+          "_id": {
+            "$oid": "5e606cf5f8a0ec2cac5b85ce"
+          },
+          "category": "Sweet Spicy Chicken with Cheese",
+          "price": "5.5/each"
+        },
+        "quantity": {
+          "$numberInt": "1"
+        }
+      },
+      {
+        "product": {
+          "_id": {
+            "$oid": "5e606b50f8a0ec2cac5b85cc"
+          },
+          "category": "Kung Bao Chicken",
+          "price": "5.5/each"
+        },
+        "quantity": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "product": {
+          "_id": {
+            "$oid": "5e606d7df8a0ec2cac5b85d0"
+          },
+          "category": "Honey black rice with honey",
+          "price": "5.5/each"
+        },
+        "quantity": {
+          "$numberInt": "3"
+        }
+      }
+    ],
+    "date": null,
+    "total": {
+      "$numberInt": "10"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e65187400d9d561091b4350"
+    },
+    "products": [
+      {
+        "product": {
+          "_id": {
+            "$oid": "5e606cf5f8a0ec2cac5b85ce"
+          },
+          "category": "Sweet Spicy Chicken with Cheese",
+          "price": "5.5/each"
+        },
+        "quantity": {
+          "$numberInt": "1"
+        }
+      },
+      {
+        "product": {
+          "_id": {
+            "$oid": "5e606b50f8a0ec2cac5b85cc"
+          },
+          "category": "Kung Bao Chicken",
+          "price": "5.5/each"
+        },
+        "quantity": {
+          "$numberInt": "2"
+        }
+      },
+      {
+        "product": {
+          "_id": {
+            "$oid": "5e606d7df8a0ec2cac5b85d0"
+          },
+          "category": "Honey black rice with honey",
+          "price": "5.5/each"
+        },
+        "quantity": {
+          "$numberInt": "3"
+        }
+      }
+    ],
+    "date": null,
+    "total": {
+      "$numberInt": "10"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e678d8156418872e3cd8730"
+    },
+    "products": [
+      {
+        "product": {
+          "_id": {
+            "$oid": "5e606d7df8a0ec2cac5b85d0"
+          },
+          "category": "Honey black rice with honey",
+          "price": "5.5/each"
+        },
+        "quantity": {
+          "$numberInt": "3"
+        }
+      }
+    ],
+    "date": null,
+    "total": {
+      "$numberInt": "10"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+]

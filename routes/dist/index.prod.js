@@ -1,0 +1,1 @@
+"use strict";var csurf=require("csurf"),express=require("express"),cookieParser=require("cookie-parser"),router=express.Router();router.get("/",function(e,r){r.send("Users!!!")}),module.exports=router;

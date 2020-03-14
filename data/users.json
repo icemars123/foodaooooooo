@@ -1,0 +1,40 @@
+[
+  {
+    "_id": {
+      "$oid": "5e6784a003efaa726e27a0b9"
+    },
+    "birth": "",
+    "sex": "",
+    "isAdmin": false,
+    "name": "567890",
+    "phone": "567890",
+    "password": "$2b$10$g8B5cOed/vx..0bDIpspPugNidm9J4Bt91iSC/e020i4tptaN9g6S",
+    "registerDate": {
+      "$date": {
+        "$numberLong": "1583842464443"
+      }
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6794de2411a47382b373c9"
+    },
+    "birth": "",
+    "sex": "",
+    "isAdmin": true,
+    "name": "567890",
+    "phone": "1234567",
+    "password": "$2b$10$m.ryuts.3iKwRtPJ1JR4euX2xsZiBM0/sTlmY0VMz5NKI.QbXECyO",
+    "registerDate": {
+      "$date": {
+        "$numberLong": "1583846622321"
+      }
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+]

@@ -1,0 +1,1 @@
+"use strict";var jwt=require("jsonwebtoken"),config=require("config");function auth(e,t,r){var n=e.header("x-auth-token");if(!n)return t.status(401).json({message:"Access denied. No token provided."});try{var s=jwt.verify(n,config.get("jwtPrivateKey"));e.user=s,r()}catch(e){t.status(400).send("Invalid token.")}}module.exports=auth;

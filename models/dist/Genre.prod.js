@@ -1,0 +1,1 @@
+"use strict";var Joi=require("@hapi/joi"),mongoose=require("mongoose"),genreSchema=new mongoose.Schema({name:{type:String,required:!0,minlength:3}}),Genre=new mongoose.model("Genre",genreSchema);function validateGenre(e){return Joi.object({name:Joi.string().min(3).required()}).validate(e)}exports.Genre=Genre,exports.genreSchema=genreSchema,exports.validateGenre=validateGenre;

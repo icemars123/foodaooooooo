@@ -1,0 +1,1 @@
+"use strict";var mongoose=require("mongoose"),config=require("config");module.exports=function(){var o=config.get("db");mongoose.connect(o,{useNewUrlParser:!0,useUnifiedTopology:!0,useCreateIndex:!0,useFindAndModify:!1}).then(function(){return console.log("Connected to MongoDB...")}).catch(function(o){return console.log("Could not connect to MongoDB",o)})};

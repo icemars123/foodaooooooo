@@ -1,0 +1,1 @@
+"use strict";module.exports=function(s,e,t){if(!s.user.isAdmin)return e.status(403).send({message:"Access denied."});t()};

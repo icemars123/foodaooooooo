@@ -1,0 +1,56 @@
+[
+  {
+    "_id": {
+      "$oid": "5e5f8826c82ddd22678bfbf6"
+    },
+    "name": "Baked Wheaten Cakes",
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e5f8851c82ddd22678bfbf7"
+    },
+    "name": "Steamed Dumplings",
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e5f885ec82ddd22678bfbf8"
+    },
+    "name": "Steam Stuffed Bun",
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e5f8867c82ddd22678bfbf9"
+    },
+    "name": "Snacks",
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e5f8871c82ddd22678bfbfa"
+    },
+    "name": "Porridge",
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e5f8af3c82ddd22678bfbfc"
+    },
+    "name": "Drinks",
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+]

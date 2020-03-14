@@ -1,0 +1,562 @@
+[
+  {
+    "_id": {
+      "$oid": "5e606b50f8a0ec2cac5b85cc"
+    },
+    "isPublished": true,
+    "category": "Kung Bao Chicken",
+    "price": "5.5/each",
+    "main_materials": "Boneless chicken with chili",
+    "taste": "Sour and spicy",
+    "features": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8826c82ddd22678bfbf6"
+      },
+      "name": "Baked Wheaten Cakes"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e606cf5f8a0ec2cac5b85ce"
+    },
+    "isPublished": true,
+    "category": "Sweet Spicy Chicken with Cheese",
+    "price": "5.5/each",
+    "main_materials": "Chicken chops, Masuria cheese.",
+    "taste": "Sweet and spicy",
+    "features": "Marinated chicken chops in home made sauce with mushrooms,  covered with a layer of creamy cheese, smooth, smell its fragrance and spicy. It is deliciously fun experience.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8826c82ddd22678bfbf6"
+      },
+      "name": "Baked Wheaten Cakes"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e606d7df8a0ec2cac5b85d0"
+    },
+    "isPublished": true,
+    "category": "Honey black rice with honey",
+    "price": "5.5/each",
+    "main_materials": "Black rice honey dates.Gouchi",
+    "taste": "Sweet",
+    "features": "Black rice with honey cooked with dates, gouchi, soft, chewing, sweet and nutrient-rich, light fragrance.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8826c82ddd22678bfbf6"
+      },
+      "name": "Baked Wheaten Cakes"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e606e728646602ccdee338b"
+    },
+    "isPublished": true,
+    "category": "Vegetarian with seven ingredients",
+    "price": "5.5/each",
+    "main_materials": "Bokchoy Carrots Black fungus mushrooms, dried beans, pasta, corn",
+    "taste": "Savory",
+    "features": "Babe Bok choy, crispy carrots, fermented beans, fresh mushrooms, black fungus, sweet corn mixed with veggie sources. The love for vegetarian.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8826c82ddd22678bfbf6"
+      },
+      "name": "Baked Wheaten Cakes"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e606e9d8646602ccdee338d"
+    },
+    "isPublished": true,
+    "category": "Traditional pork",
+    "price": "5.5/each",
+    "main_materials": "Marble Pork with onions",
+    "taste": "Savory",
+    "features": "Selected high-quality female pork, marinated marble port, combined with black fungus and green onion and juicy, and fragrant.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8826c82ddd22678bfbf6"
+      },
+      "name": "Baked Wheaten Cakes"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e606f728646602ccdee3397"
+    },
+    "isPublished": true,
+    "category": "Pork, shrimps",
+    "price": "5.9/each/3peace",
+    "main_materials": "Marble pork shrimp shallots,",
+    "taste": "Savory",
+    "features": "Marble Port, specially minced, so chewy.  With babe shrimp, tenderize the meat.  Green onion covering the whole meatballs, juicy, fragrant fresh.  A traditional Chinese ingredient.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8851c82ddd22678bfbf7"
+      },
+      "name": "Steamed Dumplings"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e606f998646602ccdee3399"
+    },
+    "isPublished": true,
+    "category": "Traditional Beef",
+    "price": "5.9/each/3peace",
+    "main_materials": "Burdock Beef, shallots",
+    "taste": "Savory",
+    "features": "Chopped quality Burdock, with homemade sourc fresh, juicy Hi-protein, rich nutrition.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8851c82ddd22678bfbf7"
+      },
+      "name": "Steamed Dumplings"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e606fe58646602ccdee339b"
+    },
+    "isPublished": true,
+    "category": "Vegetarian Steamed",
+    "price": "5.9/each/3peace",
+    "main_materials": "Dried kale, mushrooms Black fungus vermicelli",
+    "taste": "Savory",
+    "features": "The marinated dried kale mixed with egg strip, garnished with tender black fungus and mushrooms, and the vermicelli absorb the juice from the ingredients.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8851c82ddd22678bfbf7"
+      },
+      "name": "Steamed Dumplings"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e60702a8646602ccdee339d"
+    },
+    "isPublished": true,
+    "category": "Chicken and shrimp",
+    "price": "5.9/each/3peace",
+    "main_materials": "Chicken breast shrimp, tender tofu.",
+    "taste": "Savory",
+    "features": "Delicious Combination of Chicken breast, shrimp, tender tofu, refreshing and juicy",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8851c82ddd22678bfbf7"
+      },
+      "name": "Steamed Dumplings"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6070878646602ccdee339f"
+    },
+    "isPublished": true,
+    "category": "Creamy custard ",
+    "price": "5.9/each/3peace",
+    "main_materials": "Cream, egg yolks.",
+    "taste": "Sweet",
+    "features": "Creamy, also known as” milk royal bag”, is one of China's traditional folk snacks.  Gold-colored milk-flavored filling wrapped in dedicated soft skin, sweet but not greasy, you will love it.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f885ec82ddd22678bfbf8"
+      },
+      "name": "Steam Stuffed Bun"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6070da8646602ccdee33a1"
+    },
+    "isPublished": true,
+    "category": "Vegetarian",
+    "price": "4.9/each/1peace",
+    "main_materials": "Beans Mushroom peppers",
+    "taste": "Savory",
+    "features": "Fresh beans with the combination of fresh green peppers, mushrooms fried, a filling with unique taste, chic fragrance.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f885ec82ddd22678bfbf8"
+      },
+      "name": "Steam Stuffed Bun"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6071078646602ccdee33a3"
+    },
+    "isPublished": true,
+    "category": "Marinated meat",
+    "price": "4.9/each/1peace",
+    "main_materials": "Marble port, Homemade source",
+    "taste": "Savory",
+    "features": "The Marinated marble pork, mushrooms with the special spices creates a unique taste, the filling is smooth and not greasy, but flavory juicy.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f885ec82ddd22678bfbf8"
+      },
+      "name": "Steam Stuffed Bun"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e60713f8646602ccdee33a5"
+    },
+    "isPublished": true,
+    "category": "Beef Tenderloin",
+    "price": "5.9/each/1peace",
+    "main_materials": "Tenderloin lettuce tomatoes,",
+    "taste": "Savory",
+    "features": "Selected quality tenderloin marinated with special home made source mixed with lettuce, tomatoes, creating a unique flavour",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f885ec82ddd22678bfbf8"
+      },
+      "name": "Steam Stuffed Bun"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6071918646602ccdee33a7"
+    },
+    "isPublished": true,
+    "category": "Five-scented meat",
+    "price": "5.2/each/one pack",
+    "main_materials": "Selected pig neck meat home made source",
+    "taste": "Crisps, savory",
+    "features": "Selected on the pig neck meat marinated with home made source unique crispy, and delicious.  The receipt is from Shandong and used for over 100 years",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8867c82ddd22678bfbf9"
+      },
+      "name": "Snacks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e60721e8646602ccdee33a9"
+    },
+    "isPublished": true,
+    "category": "Fu Bao",
+    "price": "5.2/each/3peace",
+    "main_materials": "Crispy pastry Vermicelli greens, corn, carrots.",
+    "taste": "Crisps",
+    "features": "Unique shape and nutritional combination of ingredients, full of happiness, symbolizing luck and happiness, is a delicious and fun experience",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8867c82ddd22678bfbf9"
+      },
+      "name": "Snacks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6072608646602ccdee33ab"
+    },
+    "isPublished": true,
+    "category": "Fried pork ribs",
+    "price": "5.2/each/one pack",
+    "main_materials": "Pork Ribs, ginger juice.",
+    "taste": "Crispy tender",
+    "features": "Quality pork chop, marinated with home made sources. meat is tender, excellent snacks in the afternoon",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8867c82ddd22678bfbf9"
+      },
+      "name": "Snacks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e60729c8646602ccdee33ad"
+    },
+    "isPublished": true,
+    "category": "Spring rolls",
+    "price": "5.2/each/3peace",
+    "main_materials": "Corn skin,  carrot, kale",
+    "taste": "Crisp",
+    "features": "Spring rolls in China has a long history, folk snacks, containing all vegetarian, fried, crispy delicious.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8867c82ddd22678bfbf9"
+      },
+      "name": "Snacks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6072cf8646602ccdee33af"
+    },
+    "isPublished": true,
+    "category": "Snow Cotton Red Bean",
+    "price": "5.2/each/one pack",
+    "main_materials": "Red bean, pine raisins, starch, egg whites.",
+    "taste": "Sweet",
+    "features": "Northeast characteristic dessert snacks, delicate taste, with raisins sweet, the favorite of young girls.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8867c82ddd22678bfbf9"
+      },
+      "name": "Snacks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6073028646602ccdee33b1"
+    },
+    "isPublished": true,
+    "category": "Hemp",
+    "price": "1/each/1peace",
+    "main_materials": "Red bean, stick rice flour, sesame seeds.",
+    "taste": "Chewy and soft",
+    "features": "From Chinese Traditional receipt in shape, color golden and fluffy yellow texture adding sugar and the aroma of sesame seeds, soft crispy.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8867c82ddd22678bfbf9"
+      },
+      "name": "Snacks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6077808646602ccdee33b3"
+    },
+    "isPublished": true,
+    "category": "Traditional eight treasure Porridge",
+    "price": "4.9/each",
+    "main_materials": "Millet, beans, walnuts, peanuts, red dates, cinnamon, lotus seeds, rice",
+    "taste": "Sweet and fragrant",
+    "features": "Rice, pearl barley, euryale as the main material, and then with white lentils, red dates, lilies, lotus seeds, cinnamon, a total of eight raw materials and slow cooked.   It is bright in color, smooth, sweet, fragrant seductive, and not greasy. Eight treasure porridge has many benefits: healthy hair, eye, liver and other main organs. It is also good for skin care, blood, reduce body sugar level and avoid being thirsty. It can be used for obesity and neurasthenia, can also be used as daily health and fitness food.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8871c82ddd22678bfbfa"
+      },
+      "name": "Porridge"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6077f08646602ccdee33b5"
+    },
+    "isPublished": true,
+    "category": "Mushroom chicken porridge",
+    "price": "4.9/each",
+    "main_materials": "Rice chicken leg meat mushroom ginger",
+    "taste": "Savory",
+    "features": "A selection of high-quality mushrooms, chicken chops. Warm and energize the body. Improve the functions of spleen and stomach, better blood circulation, stronger bones. Low fat control diet.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8871c82ddd22678bfbfa"
+      },
+      "name": "Porridge"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6078438646602ccdee33b7"
+    },
+    "isPublished": true,
+    "category": "Sour and spicy soup",
+    "price": "4.9/each",
+    "main_materials": "Black fungus, carrot, tofu, mushroom, egg",
+    "taste": "Spicy and sour",
+    "features": "Spicy soup is a traditional Sichuan food snack, belonging to Sichuan cuisine or Hunan cuisine. Sichuan spicy soup is characterized by sour, spicy, salty, fresh, fragrant. With meat strip,  silk tofu, winter shoots, Baonin vinegar and other ingredients. It is an excellent choice after meal as it can help to digest the food. It also improves the appetite.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8871c82ddd22678bfbfa"
+      },
+      "name": "Porridge"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e60787e8646602ccdee33b9"
+    },
+    "isPublished": true,
+    "category": "Sweet purple potato porridge",
+    "price": "4.9/each",
+    "main_materials": "Purple potato rice",
+    "taste": "Fresh sweet",
+    "features": "Purple potato contains a very rich nutritional value, and purple potato porridge is a simple and healthy small meal, improve the digestion. Healthy snack choice.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8871c82ddd22678bfbfa"
+      },
+      "name": "Porridge"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e60790d8646602ccdee33bb"
+    },
+    "isPublished": true,
+    "category": "Ice sugar Pear Juice",
+    "price": "4.5/each",
+    "main_materials": "Ice Sugar, Pear",
+    "taste": "Sweet",
+    "features": "With sweet delicious, raw and nourishing stomach, and the effect of stopping cough, can reduce sputum fire, moisturizing the lungs, calming the heart. Can relieve cold or temperature  caused by cough, flu or other symptoms.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6079388646602ccdee33bd"
+    },
+    "isPublished": true,
+    "category": "Sour plum joice",
+    "price": "4.5/each",
+    "main_materials": "U Plum, Dry Hawthorn, Lushen flower, Chen pi, licorice",
+    "taste": "Sour sweet",
+    "features": "The organic acid content in the sour plum is very rich, such as citric acid, malic acid and so on. So when in summer, drinking a glass of sour plum juice will energize and improve muscle and vascular tissue’s vitality.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e6079648646602ccdee33bf"
+    },
+    "isPublished": true,
+    "category": "Silky milk tea",
+    "price": "4.5/each",
+    "main_materials": "Sunglod brand full-creamlight milk. Black tea, sugar",
+    "taste": "Sweet",
+    "features": "Silky Milk Tea is the synonymous with authentic, balsamic. Lin Muhe, founder of the old-fashioned Lanfang Yuan, now sells more than a thousand cups of tea a day in central area, attracting a lot of famous people who are the regular customers.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e608af5ce05b82e85b5cbb9"
+    },
+    "isPublished": true,
+    "category": "Sunny day",
+    "price": "4.5/each",
+    "main_materials": "Lemon, sugar, plums.",
+    "taste": "Sour sweet",
+    "features": "Exclusive homemade drink, summer refreshing special drink with lemon, syrup.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5e611a4b8147fe374217b65e"
+    },
+    "isPublished": true,
+    "category": "Black pepper beef",
+    "price": "5.5/each",
+    "main_materials": "Black pepper, onion, beef",
+    "taste": "Savory",
+    "features": "Selected high-quality beef with trace of fat, freshly grinded home made black pepper sauce. Enhance the taste of beef, onion filling yet maintain the nutrition",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8826c82ddd22678bfbf6"
+      },
+      "name": "Baked Wheaten Cakes"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  }
+]

@@ -15,35 +15,60 @@ var mongoose = require('mongoose'); // create product schema
 
 
 var productSchema = new mongoose.Schema({
-  category: {
+  dishName: {
     type: String,
     required: true,
-    minlength: 4
-  },
-  main_materials: {
-    type: String,
-    required: true
-  },
-  taste: {
-    type: String,
-    required: true
-  },
-  features: {
-    type: String,
-    required: true
-  },
-  isPublished: {
-    type: Boolean
+    trim: true,
+    minlength: 3
   },
   price: {
-    type: String,
+    type: Number,
     required: function required() {
       return this.isPublished;
     }
   },
+  unit: {
+    type: String,
+    required: true,
+    trim: true,
+    minlength: 6
+  },
+  elements: {
+    type: String,
+    trim: true,
+    required: true
+  },
+  tastes: {
+    type: [String],
+    required: true
+  },
+  detail: {
+    type: String,
+    trim: true,
+    required: true
+  },
+  imageName: {
+    type: String,
+    trim: true
+  },
+  videoName: {
+    type: String,
+    trim: true
+  },
+  isPublished: {
+    type: Boolean,
+    requried: true
+  },
+  discount: {
+    type: String,
+    trim: true
+  },
   genre: {
     type: genreSchema,
     required: true
+  },
+  link: {
+    type: [String]
   }
 }); // create object
 
@@ -51,12 +76,13 @@ var Product = new mongoose.model('Product', productSchema); // Validate product 
 
 function validateProduct(product) {
   var schema = Joi.object({
-    category: Joi.string().required(),
-    price: Joi.string().required(),
-    main_materials: Joi.string().required(),
-    taste: Joi.string().required(),
-    features: Joi.string().required(),
-    // isPublished: Joi.boolean().required(),
+    dishName: Joi.string().required(),
+    price: Joi.number().required(),
+    unit: Joi.string().required(),
+    elements: Joi.string().required(),
+    tastes: Joi.array().items(Joi.string().required()).required(),
+    detail: Joi.string().required(),
+    isPublished: Joi["boolean"]().required(),
     genreId: Joi.objectId().required()
   });
   return schema.validate(product);

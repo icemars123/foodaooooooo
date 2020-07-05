@@ -10,35 +10,61 @@ const mongoose = require('mongoose');
 // create product schema
 const productSchema = new mongoose.Schema(
   {
-    category: {
+    dishName: {
       type: String,
       required: true,
-      minlength: 4,
-    },
-    main_materials: {
-      type: String,
-      required: true,
-    },
-    taste: {
-      type: String,
-      required: true,
-    },
-    features: {
-      type: String,
-      required: true,
-    },
-    isPublished: {
-      type: Boolean
+      trim: true,
+      minlength: 3,
     },
     price: {
-      type: String,
+      type: Number,
       required: function () {
         return this.isPublished
       }
     },
+    unit: {
+      type: String,
+      required: true,
+      trim: true,
+      minlength: 6,
+    },
+    elements: {
+      type: String,
+      trim: true,
+      required: true,
+    },
+    tastes: {
+      type: [String],
+      required: true,
+    },
+    detail: {
+      type: String,
+      trim: true,
+      required: true,
+    },
+    imageName: {
+      type: String,
+      default: ""
+    },
+    videoName: {
+      type: String,
+      default: ""
+    },
+    isPublished: {
+      type: Boolean,
+      requried: true
+    },
+    discount: {
+      type: String,
+      default: ""
+    },
     genre: {
       type: genreSchema,
       required: true,
+    },
+    link: {
+      type: [String],
+      default: [""]
     }
   }
 );
@@ -50,13 +76,18 @@ const Product = new mongoose.model('Product', productSchema);
 function validateProduct(product) {
   const schema = Joi.object(
     {
-      category: Joi.string().required(),
-      price: Joi.string().required(),
-      main_materials: Joi.string().required(),
-      taste: Joi.string().required(),
-      features: Joi.string().required(),
-      // isPublished: Joi.boolean().required(),
-      genreId: Joi.objectId().required()
+      dishName: Joi.string().required(),
+      price: Joi.number().required(),
+      unit: Joi.string().required(),
+      elements: Joi.string().required(),
+      tastes: Joi.array().items(Joi.string().required()).required(),
+      detail: Joi.string().required(),
+      imageName: Joi.string(),
+      videoName: Joi.string(),
+      isPublished: Joi.boolean().required(),
+      discount: Joi.string(),
+      genreId: Joi.objectId().required(),
+      link: Joi.array().items(Joi.string())
     }
   );
 

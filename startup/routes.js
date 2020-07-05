@@ -2,13 +2,14 @@
  *  Author: Gavin
  *  startup/routes.js
  */
-const sms = require('../routes/sms');
+// const sms = require('../routes/sms');
 const auth = require('../routes/auth');
 const orders = require('../routes/orders');
 const products = require('../routes/products');
 const genres = require('../routes/genres');
 const index = require('../routes/index');
 const users = require('../routes/users');
+const search = require('../routes/search');
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -59,8 +60,9 @@ module.exports = function (app) {
   app.use('/api/genres', genres);
   app.use('/api/index', index);
   app.use('/api/users', users);
-  app.use('/api/sms', sms);
+  // app.use('/api/sms', sms);
   app.use('/api/auth', auth);
+  app.use('/api/search', search);
 
 
   // handle error
@@ -80,7 +82,6 @@ module.exports = function (app) {
       }
     );
   });
-
 }
 
 

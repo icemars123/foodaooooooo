@@ -18,6 +18,8 @@ var index = require('../routes/index');
 
 var users = require('../routes/users');
 
+var search = require('../routes/search');
+
 var morgan = require('morgan');
 
 var express = require('express');
@@ -33,10 +35,8 @@ var MongoStore = require('connect-mongo')(session);
 module.exports = function (app) {
   app.use(morgan('dev')); // Middleware
 
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({
-    extended: true
-  })); // Init header to allow client-sides access My API
+  app.use(bodyParser.json()); // app.use(bodyParser.urlencoded({ extended: true }));
+  // Init header to allow client-sides access My API
 
   app.use(function (req, res, next) {
     // * value to give access to any origin(client side)
@@ -70,7 +70,8 @@ module.exports = function (app) {
   app.use('/api/index', index);
   app.use('/api/users', users);
   app.use('/api/sms', sms);
-  app.use('/api/auth', auth); // handle error
+  app.use('/api/auth', auth);
+  app.use('/api/search', search); // handle error
 
   app.use(function (req, res, next) {
     var error = new Error('Not found');

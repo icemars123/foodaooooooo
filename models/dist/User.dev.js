@@ -54,7 +54,7 @@ var userSchema = new mongoose.Schema({
 }); // Init a methed for generating Authentication Token
 
 userSchema.methods.generateAuthToken = function () {
-  // Init JsonWebToken
+  // Init JsonWebToken   
   var token = jwt.sign({
     phone: this.phone,
     isAdmin: this.isAdmin

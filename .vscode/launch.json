@@ -13,7 +13,8 @@
       ],
       "program": "${workspaceFolder}/app.js",
       "env": {
-        "foodao_jwtPrivateKey": "mySecureKey"
+        "foodao_jwtPrivateKey": "mySecureKey",
+        "foodao_cryptoKey": "10-4 Good Buddy",
       }
     }
   ]

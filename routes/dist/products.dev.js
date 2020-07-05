@@ -41,13 +41,18 @@ router.get('/', function _callee(req, res, next) {
             products: docs.map(function (doc) {
               return {
                 _id: doc._id,
-                category: doc.category,
+                dishName: doc.dishName,
                 price: doc.price,
-                main_materials: doc.main_materials,
-                taste: doc.taste,
-                features: doc.features,
+                unit: doc.unit,
+                elements: doc.elements,
+                tastes: doc.tastes,
+                detail: doc.detail,
+                imageName: doc.imageName,
+                videoName: doc.videoName,
                 isPublished: doc.isPublished,
+                discount: doc.discount,
                 genre: doc.genreId,
+                link: doc.link,
                 request: {
                   type: "GET",
                   url: "http://localhost:3000/api/products/" + doc._id
@@ -162,21 +167,26 @@ router.post('/', function _callee3(req, res, next) {
 
         case 8:
           product = new Product({
-            category: req.body.category,
+            dishName: req.body.dishName,
             price: req.body.price,
-            main_materials: req.body.main_materials,
-            taste: req.body.taste,
-            features: req.body.features,
+            unit: req.body.unit,
+            elements: req.body.elements,
+            tastes: req.body.tastes,
+            detail: req.body.detail,
+            imageName: req.body.imageName,
+            videoName: req.body.videoName,
             isPublished: req.body.isPublished,
+            discount: req.body.discount,
             genre: {
               _id: genre._id,
               name: genre.name
-            }
+            },
+            link: req.body.link
           });
           _context3.prev = 9;
           _context3.next = 12;
           return regeneratorRuntime.awrap(Product.find({
-            category: req.body.category
+            category: req.body.dishName
           }));
 
         case 12:
@@ -198,16 +208,21 @@ router.post('/', function _callee3(req, res, next) {
           res.status(201).json({
             message: 'Created product successfully',
             createdProduct: {
-              category: product.category,
+              dishName: product.dishName,
               price: product.price,
-              main_materials: product.main_materials,
-              taste: product.taste,
-              features: product.features,
+              unit: product.unit,
+              elements: product.elements,
+              tastes: product.tastes,
+              detail: product.detail,
+              imageName: product.imageName,
+              videoName: product.videoName,
               isPublished: product.isPublished,
+              discount: product.discount,
               genre: {
                 _id: product.genre._id,
                 name: product.genre.name
               },
+              link: product.link,
               request: {
                 type: "GET",
                 url: "http://localhost:3000/api/products/" + product._id
@@ -268,7 +283,7 @@ router.put('/:id', function _callee4(req, res, next) {
         case 9:
           _context4.next = 11;
           return regeneratorRuntime.awrap(Product.find({
-            category: req.body.category
+            dishName: req.body.dishName
           }));
 
         case 11:
@@ -279,21 +294,26 @@ router.put('/:id', function _callee4(req, res, next) {
             break;
           }
 
-          return _context4.abrupt("return", res.status(409).send('The category already exist'));
+          return _context4.abrupt("return", res.status(409).send('The dishName already exist'));
 
         case 14:
           _context4.next = 16;
           return regeneratorRuntime.awrap(Product.findByIdAndUpdate(req.params.id, {
-            category: req.body.category,
+            dishName: req.body.dishName,
             price: req.body.price,
-            main_materials: req.body.main_materials,
-            taste: req.body.taste,
-            features: req.body.features,
+            unit: req.body.unit,
+            elements: req.body.elements,
+            tastes: req.body.tastes,
+            detail: req.body.detail,
+            imageName: req.body.imageName,
+            videoName: req.body.videoName,
             isPublished: req.body.isPublished,
+            discount: req.body.discount,
             genre: {
               _id: genre._id,
               name: genre.name
-            }
+            },
+            link: req.body.link
           }, {
             "new": true
           }));
@@ -314,16 +334,21 @@ router.put('/:id', function _callee4(req, res, next) {
           res.status(200).json({
             message: 'Product updated successfully',
             createdProduct: {
-              category: product.category,
+              dishName: product.dishName,
               price: product.price,
-              main_materials: product.main_materials,
-              taste: product.taste,
-              features: product.features,
+              unit: product.unit,
+              elements: product.elements,
+              tastes: product.tastes,
+              detail: product.detail,
+              imageName: product.imageName,
+              videoName: product.videoName,
               isPublished: product.isPublished,
+              discount: product.discount,
               genre: {
                 _id: product.genre._id,
                 name: product.genre.name
               },
+              link: product.link,
               request: {
                 type: "GET",
                 url: "http://localhost:3000/api/products/" + product._id

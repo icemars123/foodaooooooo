@@ -1,0 +1,290 @@
+[
+  {
+    "_id": {
+      "$oid": "5e606b50f8a0ec2cac5b85cc"
+    },
+    "isPublished": true,
+    "dishName": "Kung Bao Chicken",
+    "price": {
+      "$numberDouble": "5.55"
+    },
+    "unit": "/ each",
+    "discount": "",
+    "elements": "Boneless chicken with chili",
+    "tastes": [
+      "Sour",
+      "spicy"
+    ],
+    "detail": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8826c82ddd22678bfbf6"
+      },
+      "name": "Baked Wheaten Cakes"
+    },
+    "imageName": "",
+    "videoName": "",
+    "link": [
+      ""
+    ],
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0b209b51b5cd0df8ecef34"
+    },
+    "tastes": [
+      "Sour",
+      "spicy"
+    ],
+    "link": [
+      "sdf"
+    ],
+    "dishName": "hehehehefhicken",
+    "price": {
+      "$numberDouble": "1.11"
+    },
+    "unit": "/ each",
+    "elements": "Boneless chicken with chili",
+    "detail": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "imageName": "null",
+    "videoName": "null",
+    "isPublished": true,
+    "discount": "null",
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0b27d22f16c7101c896fba"
+    },
+    "tastes": [
+      "Sour",
+      "spicy"
+    ],
+    "imageName": "",
+    "videoName": "",
+    "discount": "",
+    "link": [
+      ""
+    ],
+    "dishName": "fishfishfish",
+    "price": {
+      "$numberInt": "10"
+    },
+    "unit": "/ each",
+    "elements": "Boneless chicken with chili",
+    "detail": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "isPublished": true,
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0b27f72f16c7101c896fbc"
+    },
+    "tastes": [
+      "Sour",
+      "spicy"
+    ],
+    "imageName": "",
+    "videoName": "",
+    "discount": "",
+    "link": [
+      ""
+    ],
+    "dishName": "eggeggegg",
+    "price": {
+      "$numberInt": "11"
+    },
+    "unit": "/ each",
+    "elements": "Boneless chicken with chili",
+    "detail": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "isPublished": true,
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0b280a2f16c7101c896fbe"
+    },
+    "tastes": [
+      "Sour",
+      "spicy"
+    ],
+    "imageName": "",
+    "videoName": "",
+    "discount": "",
+    "link": [
+      ""
+    ],
+    "dishName": "pork",
+    "price": {
+      "$numberInt": "13"
+    },
+    "unit": "/ each",
+    "elements": "Boneless chicken with chili",
+    "detail": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "isPublished": true,
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0b281b2f16c7101c896fc0"
+    },
+    "tastes": [
+      "Sour",
+      "spicy"
+    ],
+    "imageName": "",
+    "videoName": "",
+    "discount": "",
+    "link": [
+      ""
+    ],
+    "dishName": "ham",
+    "price": {
+      "$numberInt": "13"
+    },
+    "unit": "/ each",
+    "elements": "Boneless chicken with chili",
+    "detail": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "isPublished": true,
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0b28222f16c7101c896fc2"
+    },
+    "tastes": [
+      "Sour",
+      "spicy"
+    ],
+    "imageName": "",
+    "videoName": "",
+    "discount": "",
+    "link": [
+      ""
+    ],
+    "dishName": "burger",
+    "price": {
+      "$numberInt": "13"
+    },
+    "unit": "/ each",
+    "elements": "Boneless chicken with chili",
+    "detail": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "isPublished": true,
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0b35472508091220c357dd"
+    },
+    "tastes": [
+      "Sour",
+      "spicy"
+    ],
+    "imageName": "",
+    "videoName": "",
+    "discount": "",
+    "link": [
+      "https://www.theguardian.com/technology/2019/jun/12/"
+    ],
+    "dishName": "milk",
+    "price": {
+      "$numberInt": "13"
+    },
+    "unit": "/ each",
+    "elements": "Boneless chicken with chili",
+    "detail": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "isPublished": true,
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0b36962508091220c357df"
+    },
+    "tastes": [
+      "Sour",
+      "spicy"
+    ],
+    "imageName": "https://www.theguardian.com/technology/2019/jun/12/uber-air-announces-melbourne-as-trial-city-for-flying-taxi-service#img-1",
+    "videoName": "",
+    "discount": "",
+    "link": [
+      ""
+    ],
+    "dishName": "cocunut",
+    "price": {
+      "$numberInt": "13"
+    },
+    "unit": "/ each",
+    "elements": "Boneless chicken with chili",
+    "detail": "Spicy sweet, smooth and refreshing. It is the unique flavor of chicken leg meat, selected variety of Sichuan peppers with vintage vinegar.",
+    "isPublished": true,
+    "genre": {
+      "_id": {
+        "$oid": "5e5f8af3c82ddd22678bfbfc"
+      },
+      "name": "Drinks"
+    },
+    "__v": {
+      "$numberInt": "0"
+    }
+  }
+]

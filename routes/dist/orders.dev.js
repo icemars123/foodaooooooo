@@ -144,8 +144,9 @@ router.post('/', Auth, function _callee3(req, res, next) {
           items.push({
             product: {
               _id: product._id,
-              category: product.category,
-              price: product.price
+              dishName: product.dishName,
+              price: product.price,
+              unit: product.unit
             },
             quantity: item.quantity
           });

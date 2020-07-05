@@ -9,6 +9,7 @@ const products = require('../routes/products');
 const genres = require('../routes/genres');
 const index = require('../routes/index');
 const users = require('../routes/users');
+const search = require('../routes/search');
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -23,7 +24,7 @@ module.exports = function (app) {
   app.use(morgan('dev'));
   // Middleware
   app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: true }));
+  // app.use(bodyParser.urlencoded({ extended: true }));
 
   // Init header to allow client-sides access My API
   app.use((req, res, next) => {
@@ -61,6 +62,7 @@ module.exports = function (app) {
   app.use('/api/users', users);
   app.use('/api/sms', sms);
   app.use('/api/auth', auth);
+  app.use('/api/search', search);
 
 
   // handle error
@@ -80,7 +82,6 @@ module.exports = function (app) {
       }
     );
   });
-
 }
 
 

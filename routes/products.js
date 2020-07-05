@@ -11,6 +11,8 @@ const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
+
+
 // Get all products
 router.get(
   '/',
@@ -25,13 +27,18 @@ router.get(
           doc => {
             return {
               _id: doc._id,
-              category: doc.category,
+              dishName: doc.dishName,
               price: doc.price,
-              main_materials: doc.main_materials,
-              taste: doc.taste,
-              features: doc.features,
+              unit: doc.unit,
+              elements: doc.elements,
+              tastes: doc.tastes,
+              detail: doc.detail,
+              imageName: doc.imageName,
+              videoName: doc.videoName,
               isPublished: doc.isPublished,
+              discount: doc.discount,
               genre: doc.genreId,
+              link: doc.link,
               request: {
                 type: "GET",
                 url: "http://localhost:3000/api/products/" + doc._id
@@ -94,6 +101,8 @@ router.get(
   }
 );
 
+
+
 // Create and add a product
 router.post(
   '/',
@@ -108,22 +117,27 @@ router.post(
 
     let product = new Product(
       {
-        category: req.body.category,
+        dishName: req.body.dishName,
         price: req.body.price,
-        main_materials: req.body.main_materials,
-        taste: req.body.taste,
-        features: req.body.features,
+        unit: req.body.unit,
+        elements: req.body.elements,
+        tastes: req.body.tastes,
+        detail: req.body.detail,
+        imageName: req.body.imageName,
+        videoName: req.body.videoName,
         isPublished: req.body.isPublished,
+        discount: req.body.discount,
         genre: {
           _id: genre._id,
           name: genre.name
-        }
+        },
+        link: req.body.link,
       }
     );
 
     try {
       // check category is unique or not
-      const check = await Product.find({ category: req.body.category });
+      const check = await Product.find({ category: req.body.dishName });
       if (check.length > 0) return res.status(409).send('The category already exist');
 
       product = await product.save();
@@ -131,16 +145,21 @@ router.post(
         {
           message: 'Created product successfully',
           createdProduct: {
-            category: product.category,
+            dishName: product.dishName,
             price: product.price,
-            main_materials: product.main_materials,
-            taste: product.taste,
-            features: product.features,
+            unit: product.unit,
+            elements: product.elements,
+            tastes: product.tastes,
+            detail: product.detail,
+            imageName: product.imageName,
+            videoName: product.videoName,
             isPublished: product.isPublished,
+            discount: product.discount,
             genre: {
               _id: product.genre._id,
               name: product.genre.name
             },
+            link: product.link,
             request: {
               type: "GET",
               url: "http://localhost:3000/api/products/" + product._id
@@ -174,22 +193,27 @@ router.put(
       const genre = await Genre.findById(req.body.genreId);
       if (!genre) return res.status(400).send('Invalid genre');
       // check category is unique or not
-      const check = await Product.find({ category: req.body.category });
-      if (check.length > 0) return res.status(409).send('The category already exist');
+      const check = await Product.find({ dishName: req.body.dishName });
+      if (check.length > 0) return res.status(409).send('The dishName already exist');
 
       const product = await Product.findByIdAndUpdate(
         req.params.id,
         {
-          category: req.body.category,
+          dishName: req.body.dishName,
           price: req.body.price,
-          main_materials: req.body.main_materials,
-          taste: req.body.taste,
-          features: req.body.features,
+          unit: req.body.unit,
+          elements: req.body.elements,
+          tastes: req.body.tastes,
+          detail: req.body.detail,
+          imageName: req.body.imageName,
+          videoName: req.body.videoName,
           isPublished: req.body.isPublished,
+          discount: req.body.discount,
           genre: {
             _id: genre._id,
             name: genre.name
-          }
+          },
+          link: req.body.link,
         },
         {
           new: true
@@ -207,16 +231,21 @@ router.put(
         {
           message: 'Product updated successfully',
           createdProduct: {
-            category: product.category,
+            dishName: product.dishName,
             price: product.price,
-            main_materials: product.main_materials,
-            taste: product.taste,
-            features: product.features,
+            unit: product.unit,
+            elements: product.elements,
+            tastes: product.tastes,
+            detail: product.detail,
+            imageName: product.imageName,
+            videoName: product.videoName,
             isPublished: product.isPublished,
+            discount: product.discount,
             genre: {
               _id: product.genre._id,
               name: product.genre.name
             },
+            link: product.link,
             request: {
               type: "GET",
               url: "http://localhost:3000/api/products/" + product._id
@@ -308,7 +337,6 @@ router.delete(
     }
   }
 );
-
 
 
 

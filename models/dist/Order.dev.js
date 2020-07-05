@@ -22,12 +22,17 @@ var orderSchema = new mongoose.Schema({
       properties: {
         product: {
           type: new mongoose.Schema({
-            category: {
+            dishName: {
               type: String,
               required: true,
               trim: true
             },
             price: {
+              type: Number,
+              required: true,
+              trim: true
+            },
+            unit: {
               type: String,
               required: true,
               trim: true

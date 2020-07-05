@@ -40,7 +40,7 @@ const productSchema = new mongoose.Schema(
     detail: {
       type: String,
       trim: true,
-      required: true,
+      required: true, 
     },
     imageName: {
       type: String,
@@ -51,8 +51,7 @@ const productSchema = new mongoose.Schema(
       trim: true,
     },
     isPublished: {
-      type: Boolean,
-      requried: true
+      type: Boolean
     },
     discount: {
       type: String,
@@ -79,10 +78,10 @@ function validateProduct(product) {
       price: Joi.number().required(),
       unit: Joi.string().required(),
       elements: Joi.string().required(),
-      tastes: Joi.array().items(Joi.string().required()).required(),
+      tastes: Joi.Array().items(Joi.string().required()).required(),
       detail: Joi.string().required(),
-      isPublished: Joi.boolean().required(),
-      genreId: Joi.objectId().required(),
+      // isPublished: Joi.boolean().required(),
+      genreId: Joi.objectId().required()
     }
   );
 

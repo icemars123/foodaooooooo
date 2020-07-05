@@ -52,7 +52,7 @@ const userSchema = new mongoose.Schema(
 
 // Init a methed for generating Authentication Token
 userSchema.methods.generateAuthToken = function () {
-  // Init JsonWebToken
+  // Init JsonWebToken   
   const token = jwt.sign(
     {
       phone: this.phone,

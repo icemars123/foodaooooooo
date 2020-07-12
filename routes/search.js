@@ -17,8 +17,6 @@ router.get(
   '/',
   async (req, res, next) => {
     try {
-      // docs from db
-      console.log('price: ' + req.query.price);
 
       const doc = await Product.find(
         {
@@ -40,7 +38,7 @@ router.get(
           product: doc,
           request: {
             type: "GET",
-            description: "GET ALL Mproducts",
+            description: "GET ALL products",
             url: "http://localhost:3000/api/products"
           }
         }

@@ -24,7 +24,7 @@ module.exports = function (app) {
   app.use(morgan('dev'));
   // Middleware
   app.use(bodyParser.json());
-  // app.use(bodyParser.urlencoded({ extended: true }));
+  app.use(bodyParser.urlencoded({ extended: true }));
 
   // Init header to allow client-sides access My API
   app.use((req, res, next) => {

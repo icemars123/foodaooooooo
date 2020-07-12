@@ -44,11 +44,11 @@ const productSchema = new mongoose.Schema(
     },
     imageName: {
       type: String,
-      trim: true,
+      default: ""
     },
     videoName: {
       type: String,
-      trim: true,
+      default: ""
     },
     isPublished: {
       type: Boolean,
@@ -56,7 +56,7 @@ const productSchema = new mongoose.Schema(
     },
     discount: {
       type: String,
-      trim: true,
+      default: ""
     },
     genre: {
       type: genreSchema,
@@ -64,6 +64,7 @@ const productSchema = new mongoose.Schema(
     },
     link: {
       type: [String],
+      default: [""]
     }
   }
 );
@@ -81,8 +82,12 @@ function validateProduct(product) {
       elements: Joi.string().required(),
       tastes: Joi.array().items(Joi.string().required()).required(),
       detail: Joi.string().required(),
+      imageName: Joi.string(),
+      videoName: Joi.string(),
       isPublished: Joi.boolean().required(),
+      discount: Joi.string(),
       genreId: Joi.objectId().required(),
+      link: Joi.array().items(Joi.string())
     }
   );
 

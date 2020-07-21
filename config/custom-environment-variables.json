@@ -1,3 +1,4 @@
 {
-  "jwtPrivateKey": "foodao_jwtPrivateKey"
+  "jwtPrivateKey": "foodao_jwtPrivateKey",
+  "cryptoKey": "foodao_cryptoKey"
 }

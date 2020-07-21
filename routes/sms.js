@@ -20,11 +20,12 @@ const nexmo = new Nexmo(
 );
 
 // Catch form submit
+// phone number includes national code and the real number (eg. +61 452570320)
 router.post('/', (req, res) => {
   // res.send(req.body);
   // console.log(req.body);
   const from = 'foodao';
-  const to = parseInt(req.body.number);
+  const to = parseInt(req.body.number);  
   var text = req.body.text;
   text = (Math.floor(Math.random() * (999999 - 100001 + 1)) + 100001).toString();
 

@@ -18,10 +18,9 @@ const router = express.Router();
 // Get all users
 router.get(
   '/',
+  [Admin, Auth],
   async (req, res, next) => {
-
     try {
-
       const docs = await User.find();
 
       res.status(200).json(
@@ -43,29 +42,30 @@ router.get(
   }
 );
 
-// // Get user by id
-// router.get(
-//   '/:id',
-//   async (req, res, next) => {
+// Get user by id
+router.get(
+  '/:id',
+  [Admin, Auth],
+  async (req, res, next) => {
 
-//     try {
-//       const user = await User.findById(req.params.id);
-//       if (!user) return res.status(404).send('The user with the given ID is not found');
+    try {
+      const user = await User.findById(req.params.id);
+      if (!user) return res.status(404).send('The user with the given ID is not found');
 
-//       res.send(user);
+      res.send(user);
 
-//     } catch (err) {
-//       console.log(err)
-//       res.status(500).json(
-//         {
-//           error: err
-//         }
-//       );
-//       next();
-//     }
+    } catch (err) {
+      console.log(err)
+      res.status(500).json(
+        {
+          error: err
+        }
+      );
+      next();
+    }
 
-//   }
-// );
+  }
+);
 
 
 // Get the current user
@@ -93,58 +93,33 @@ router.get(
 );
 
 
-// Register user
-router.post(
-  '/register',
+
+// Update user for voucher
+router.put(
+  '/getvoucher/:phone',
   async (req, res, next) => {
 
-    // check sms random number
-
-
-    const { password, password2 } = req.body;
-    if (password !== password2) return res.status(400).send({ message: 'Passwords do not match' });
-
-    const { error } = validateUser(req.body);
-    if (error) return res.status(400).send(error.details[0].message);
-
     try {
+      // const { phone } = req.params.phone;
 
-      let user = await User.findOne({ phone: req.body.phone });
-      if (user) return res.status(400).json({ message: 'User already registered.' });
+      // const user = await User.findOne({ phone });
+      // if (!user) return res.status(404).send('The user with the phone is not found');
 
-      user = new User(
-        _.pick(
-          req.body,
-          [
-            'name',
-            'phone',
-            'email',
-            'password',
-            'registerDate',
-            'birth',
-            'sex',
-            'isAdmin'
-          ]
-        )
-      );
+      await User.findOneAndUpdate
+        (
+          { phone: req.params.phone },
+          { $inc: { voucher: 10 } },
+          function (
+            err,
+            result
+          ) {
+            if (err) {
+              res.send(err);
+            } else {
+              res.send(result);
+            }
+          });
 
-      const salt = await bcrypt.genSalt(10);
-      user.password = await bcrypt.hash(user.password, salt);
-      user = await user.save();
-
-      // // Init JsonWebToken
-      // const token = jwt.sign({ _id: user._id }, config.get('jwtPrivateKey'));
-      const token = user.generateAuthToken();
-
-      // set header with token
-      res.status(201).header(
-        'x-auth-token',
-        token
-      ).json(
-        {
-          user
-        }
-      );
 
     } catch (err) {
       console.log(err)
@@ -155,28 +130,55 @@ router.post(
       );
       next();
     }
-
   }
 );
 
-// Update user
+
+// Update user for forget-password
 router.put(
-  '/:id',
-  (req, res, next) => {
-    const user = users.find(c => c.id === parseInt(req.params.id));
-    if (!user) return res.status(404).send('The user with the given ID is not found');
+  '/forget-password/:phone',
+  async (req, res, next) => {
 
-    const { error } = validateUser(req.body);
-    if (error) return res.status(400).send(error.details[0].message);
+    
+    try {
 
-    user.name = req.body.name;
-    res.send(user);
+      await User.findOneAndUpdate
+        (
+          { phone: req.params.phone },
+          {
+            password: req.body.password,
+            passwordConfirmation: req.body.passwordConfirmation
+          },
+          function (
+            err,
+            result
+          ) {
+            if (err) {
+              res.send(err);
+            } else {
+              res.send(result);
+            }
+          });
+
+
+    } catch (err) {
+      console.log(err)
+      res.status(500).json(
+        {
+          error: err
+        }
+      );
+      next();
+    }
   }
 );
+
+
 
 // Delete user
 router.delete(
   '/:id',
+  [Admin, Auth],
   (req, res, next) => {
     const user = users.find(c => c.id === parseInt(req.params.id));
     if (!user) return res.status(404).send('The user with the given ID is not found');

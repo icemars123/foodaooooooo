@@ -184,7 +184,7 @@ function validateUser(user) {
       // password must contains 0-9, a-z, A-Z, signal, {6, 16}
       password: Joi.string()
         .pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{6,16}$/),
-      passwordConfirmation: Joi.string().valid(Joi.ref('password')).required(),
+      // passwordConfirmation: Joi.string().valid(Joi.ref('password')).required(),
       primaryEmail: Joi.string().email().required(),
       subEmails: Joi.array().items(Joi.string()),
       gender: Joi.string().valid('male', 'female','gender diverse').required(),

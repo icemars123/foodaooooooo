@@ -25,10 +25,10 @@ const router = express.Router();
 router.post(
   '/signin',
   async (req, res, next) => {
-    req.body = CryptoJS.AES.encrypt(JSON.stringify(req.body), config.get('cryptoKey')).toString();
+    // req.body = CryptoJS.AES.encrypt(JSON.stringify(req.body), config.get('cryptoKey')).toString();
     // Decrypt
-    const bytes = CryptoJS.AES.decrypt(req.body, config.get('cryptoKey'));
-    req.body = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+    const bytes = CryptoJS.AES.decrypt(req.body.password, config.get('cryptoKey'));
+    req.body.password = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 
     const { error } = validateRequestLogin(req.body);
     if (error) return res.status(400).send(error.details[0].message);
@@ -83,15 +83,15 @@ router.post(
 router.post(
   '/signup',
   async (req, res, next) => {
-
     // check sms random number
-
+    
     // const { password, password2 } = req.body;
     // if (password !== password2) return res.status(400).send({ message: 'Passwords do not match' });
     // Decrypt
-    const bytes = CryptoJS.AES.decrypt(req.body, config.get('cryptoKey'));
-    req.body = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+    const bytes = CryptoJS.AES.decrypt(req.body.password, config.get('cryptoKey'));
+    req.body.password = bytes.toString(CryptoJS.enc.Utf8);
 
+    // console.log(req.body.password);
     let parentChecked = false;
     const { error } = validateUser(req.body);
     if (error) return res.status(400).send(error.details[0].message);
@@ -179,7 +179,7 @@ router.put(
       const user = await User.findOne({ phone });
       if (!user) return res.status(404).send('The user with the phone is not found');
 
-      
+
     } catch (err) {
       console.log(err)
       res.status(500).json(
@@ -203,7 +203,7 @@ function validateRequestRegister(req) {
       // password must contains 0-9, a-z, A-Z, signal
       password: Joi.string()
         .pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{6,16}$/),
-      passwordConfirmation: Joi.string().valid(Joi.ref('password')).required(),
+      // passwordConfirmation: Joi.string().valid(Joi.ref('password')).required(),
       gender: Joi.string().valid('male', 'female', 'gender diverse').required(),
     }
   );

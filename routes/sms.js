@@ -4,6 +4,7 @@
  */
 const express = require('express');
 const bodyParser = require('body-parser');
+const Joi = require('@hapi/joi');
 const Nexmo = require('nexmo');
 
 const router = express.Router();
@@ -24,10 +25,13 @@ const nexmo = new Nexmo(
 router.post('/', (req, res) => {
   // res.send(req.body);
   // console.log(req.body);
+  const { error } = validatePhone(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
+
   const from = 'foodao';
-  const to = parseInt(req.body.number);  
-  var text = req.body.text;
-  text = (Math.floor(Math.random() * (999999 - 100001 + 1)) + 100001).toString();
+  const to = parseInt(req.body.number);
+  var text = (Math.floor(Math.random() * (999999 - 100001 + 1)) + 100001).toString();
+  // req.body.text = text;
 
   nexmo.message.sendSms(from, to, text, { type: 'unicode' },
     (err, responseData) => {
@@ -57,7 +61,25 @@ router.post('/', (req, res) => {
       }
     }
   );
+
+  res.status(200).json(
+    {
+      from,
+      to,
+      text
+    }
+  );
 });
+
+function validatePhone(req) {
+  const schema = Joi.object(
+    {
+      phone: Joi.string().required(),
+    }
+  );
+
+  return schema.validate(req);
+}
 
 
 

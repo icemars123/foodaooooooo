@@ -74,7 +74,7 @@ router.post('/', (req, res) => {
 function validatePhone(req) {
   const schema = Joi.object(
     {
-      phone: Joi.string().required(),
+      number: Joi.string().required(),
     }
   );
 
